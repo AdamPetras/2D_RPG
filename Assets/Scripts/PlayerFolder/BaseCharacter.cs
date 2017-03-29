@@ -2,7 +2,7 @@
 
 namespace Assets.Scripts.PlayerFolder
 {
-    public class CharacterBase
+    public class BaseCharacter
     {
         public string Name { get; protected set; }
         public float MaxHealth { get; protected set; }
@@ -18,7 +18,7 @@ namespace Assets.Scripts.PlayerFolder
         private float _energyTimer;
         private readonly float _energyRegeneration;
 
-        public CharacterBase(string name, float health, float energy)
+        public BaseCharacter(string name, float health, float energy)
         {
             Name = name;
             MaxHealth = health;

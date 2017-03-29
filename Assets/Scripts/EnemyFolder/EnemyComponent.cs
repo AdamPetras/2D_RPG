@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Assets.Scripts.CombatSystemFolder;
 using UnityEngine;
 
 namespace Assets.Scripts.EnemyFolder
@@ -26,7 +27,8 @@ namespace Assets.Scripts.EnemyFolder
         void FixedUpdate()
         {
             _enemy.EnergyRegeneration();
-           // _enemy.AddBroadcasts(Name);
+            if(TargetEnemy.ETarget == ETarget.Enemy)
+            _enemy.AddBroadcasts(Name);
         }
     }
 }

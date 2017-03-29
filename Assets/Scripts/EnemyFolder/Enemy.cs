@@ -6,7 +6,7 @@ using Assets.Scripts.PlayerFolder;
 
 namespace Assets.Scripts.EnemyFolder
 {
-    public class Enemy : CharacterBase
+    public class Enemy : BaseCharacter
     {
         public bool Angry { get; set; }
         public Enemy(string name, float health, float energy) : base(name, health, energy)

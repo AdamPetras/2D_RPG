@@ -13,7 +13,7 @@ namespace Assets.Scripts.PlayerFolder
         None
     }
 
-    public class Player : CharacterBase
+    public class Player : BaseCharacter
     {
         private delegate void HealthDelegate(int health);
 
