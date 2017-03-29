@@ -49,7 +49,7 @@ static internal class MessengerInternal
         eventTable[eventType] = Delegate.Remove(eventTable[eventType], handler);
         MessengerInternal.OnListenerRemoved(eventType);
     }
-
+    
     static public T[] GetInvocationList<T>(string eventType)
     {
         Delegate d;
@@ -123,6 +123,11 @@ static internal class MessengerInternal
         return new BroadcastException(string.Format("Broadcasting message {0} but listeners have a different signature than the broadcaster.", eventType));
     }
 
+    public static bool IsListnerReady(string eventType)
+    {
+        return eventTable.ContainsKey(eventType);
+    }
+
     public class BroadcastException : Exception
     {
         public BroadcastException(string msg)
@@ -146,6 +151,11 @@ static public class Messenger
     static public void AddListener(string eventType, Action handler)
     {
         MessengerInternal.AddListener(eventType, handler);
+    }
+
+    public static bool IsListenerReady(params string []eventTypes)
+    {
+        return eventTypes.All(eventType => MessengerInternal.IsListnerReady(eventType));
     }
 
     static public void AddListener<TReturn>(string eventType, Func<TReturn> handler)

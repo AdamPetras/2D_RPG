@@ -21,14 +21,20 @@ namespace Assets.Scripts.EnemyFolder
         void Update()
         {
             _enemy.Run();
-           // Debug.Log(_enemy.CurrentHealth+ "and" +_enemy.CurrentEnergy);
         }
 
         void FixedUpdate()
         {
             _enemy.EnergyRegeneration();
-            if(TargetEnemy.ETarget == ETarget.Enemy)
-            _enemy.AddBroadcasts(Name);
+            
+        }
+
+        void LateUpdate()
+        {
+            if (Messenger.IsListenerReady("EnemyHealth","EnemyMaxHealth","EnemyEnergy","EnemyMaxEnergy"))
+            {
+                _enemy.AddBroadcasts(Name);
+            }
         }
     }
 }

@@ -22,11 +22,11 @@ namespace Assets.Scripts.HUD
                 _playerStatusBars = new PlayerStatusBars(_canvas);
         }
 
-        void FixedUpdate()
+        void Update()
         {
             if(!IsPlayer)
             {
-                _statusBars.Init(TargetEnemy.TargetName);
+                _statusBars.Init(TargetCharacter.TargetName);
                 _statusBars.SettingSizes();
                 _statusBars.SettingText();
             }

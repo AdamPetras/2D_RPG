@@ -15,17 +15,17 @@ namespace Assets.Scripts.CombatSystemFolder
 
         // Use this for initialization
         private ETag _eTag;
-        private TargetEnemy _targetEnemy;
+        private TargetCharacter _targetCharacter;
         void Start()
         {
             _eTag = (ETag)Enum.Parse(typeof(ETag), gameObject.tag);
-            _targetEnemy = new TargetEnemy();
+            _targetCharacter = new TargetCharacter();
         }
 
         // Update is called once per frame
         void Update()
         {
-            _targetEnemy.Hit();
+            _targetCharacter.Hit();
         }
     }
 }
