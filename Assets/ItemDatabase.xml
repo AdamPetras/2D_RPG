@@ -1,0 +1,1444 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<!--
+Types:
+        None,
+        Usable,
+        Consumable,
+        Craftable,
+        Armour,
+        Weapon,
+        Ammo     
+Subtypes:
+        None,
+        Head,
+        Chest,
+        Hands,
+        Legs,
+        Boots,
+        Neck,
+        Ring,
+        Bracers,
+        Waist,
+        Weapon,
+        Axe,
+        Bow,
+        Sword,
+        Spear,
+        Knife        
+Stats:
+        None,
+        Health,
+        Damage,
+        Consumable        
+Profesions:
+        None,
+        Cooking,
+        Fishing,
+        Tailoring,
+        Smithing,
+        Crafting
+-->
+
+<!-- # 
+ID            -> unikátní číslo itemu
+ItemName      -> název itemu
+Type          -> první typ itemu
+Subtype       -> podtyp itemu
+Stats         -> určuje co za staty bude na itemu
+StatValues    -> určuje co kolik budou mít staty hodnotu
+Chance        -> konstanta která určuje šanci na získání
+CraftItem     -> pole IDček itemů z kterých se dá vyrobit (1,2)(Kámen,Dřevo)
+NumberOfItems -> pole počtu itemů z kterých se dá vyrobit (5,2)(5xkámen,2xdřevo)  !!(musí odpovídat délce CraftItems)!!
+Quantity      -> konstanta která určuje kolik se vyrobí z ...
+Profesion     -> určuje do jaké profese můžeme přidat daný item a nebo také kde je možné z něj něco vyrobit
+Loot          -> konstanta která učtuje kolik až je možno získat itemů v lootu
+Stack         -> určuje po kolika se můžou itemy stackovat na sebe
+-->
+<Root>
+  <!-- #Region Usable -->
+  <Item>
+    <ID>1</ID>
+    <ItemName>Stone</ItemName>
+    <Type>Usable</Type>
+    <Subtype></Subtype>
+    <Stats></Stats>
+    <StatValues></StatValues>
+    <Chance></Chance>
+    <CraftItem></CraftItem>
+    <NumberOfItems></NumberOfItems>
+    <Quantity></Quantity>
+    <Profesion></Profesion>
+    <Loot>3</Loot>
+    <Stack>10</Stack>
+  </Item>
+  <Item>
+    <ID>2</ID>
+    <ItemName>Wood</ItemName>
+    <Type>Usable</Type>
+    <Subtype></Subtype>
+    <Stats></Stats>
+    <StatValues></StatValues>
+    <Chance></Chance>
+    <CraftItem></CraftItem>
+    <NumberOfItems></NumberOfItems>
+    <Quantity></Quantity>
+    <Profesion></Profesion>
+    <Loot>3</Loot>
+    <Stack>10</Stack>
+  </Item>
+  <Item>
+    <ID>3</ID>
+    <ItemName>Coal</ItemName>
+    <Type>Usable</Type>
+    <Subtype></Subtype>
+    <Stats></Stats>
+    <StatValues></StatValues>
+    <Chance></Chance>
+    <CraftItem></CraftItem>
+    <NumberOfItems></NumberOfItems>
+    <Quantity></Quantity>
+    <Profesion></Profesion>
+    <Loot>2</Loot>
+    <Stack>10</Stack>
+  </Item>
+  <Item>
+    <ID>4</ID>
+    <ItemName>Cloth</ItemName>
+    <Type>Usable</Type>
+    <Subtype></Subtype>
+    <Stats></Stats>
+    <StatValues></StatValues>
+    <Chance>30</Chance>
+    <CraftItem></CraftItem>
+    <NumberOfItems></NumberOfItems>
+    <Quantity></Quantity>
+    <Profesion></Profesion>
+    <Loot>2</Loot>
+    <Stack>10</Stack>
+  </Item>
+  <Item>
+    <ID>5</ID>
+    <ItemName>Wool</ItemName>
+    <Type>Usable</Type>
+    <Subtype></Subtype>
+    <Stats></Stats>
+    <StatValues></StatValues>
+    <Chance>10</Chance>
+    <CraftItem></CraftItem>
+    <NumberOfItems></NumberOfItems>
+    <Quantity></Quantity>
+    <Profesion></Profesion>
+    <Loot>1</Loot>
+    <Stack>10</Stack>
+  </Item>
+  <Item>
+    <ID>6</ID>
+    <ItemName>Tiger leather</ItemName>
+    <Type>Usable</Type>
+    <Subtype></Subtype>
+    <Stats></Stats>
+    <StatValues></StatValues>
+    <Chance>1</Chance>
+    <CraftItem></CraftItem>
+    <NumberOfItems></NumberOfItems>
+    <Quantity></Quantity>
+    <Profesion></Profesion>
+    <Loot>1</Loot>
+    <Stack>10</Stack>
+  </Item>
+  <Item>
+    <ID>7</ID>
+    <ItemName>Thread</ItemName>
+    <Type>Usable</Type>
+    <Subtype></Subtype>
+    <Stats></Stats>
+    <StatValues></StatValues>
+    <Chance></Chance>
+    <CraftItem></CraftItem>
+    <NumberOfItems></NumberOfItems>
+    <Quantity></Quantity>
+    <Profesion></Profesion>
+    <Loot>2</Loot>
+    <Stack>10</Stack>
+  </Item>
+  <Item>
+    <ID>8</ID>
+    <ItemName>Flint</ItemName>
+    <Type>Usable</Type>
+    <Subtype></Subtype>
+    <Stats></Stats>
+    <StatValues></StatValues>
+    <Chance></Chance>
+    <CraftItem></CraftItem>
+    <NumberOfItems></NumberOfItems>
+    <Quantity></Quantity>
+    <Profesion></Profesion>
+    <Loot>2</Loot>
+    <Stack>10</Stack>
+  </Item>
+  <Item>
+    <ID>9</ID>
+    <ItemName>Iron Ore</ItemName>
+    <Type>Usable</Type>
+    <Subtype></Subtype>
+    <Stats></Stats>
+    <StatValues></StatValues>
+    <Chance></Chance>
+    <CraftItem></CraftItem>
+    <NumberOfItems></NumberOfItems>
+    <Quantity></Quantity>
+    <Profesion></Profesion>
+    <Loot>1</Loot>
+    <Stack>10</Stack>
+  </Item>
+  <Item>
+    <ID>10</ID>
+    <ItemName>String</ItemName>
+    <Type>Usable</Type>
+    <Subtype></Subtype>
+    <Stats></Stats>
+    <StatValues></StatValues>
+    <Chance></Chance>
+    <CraftItem></CraftItem>
+    <NumberOfItems></NumberOfItems>
+    <Quantity></Quantity>
+    <Profesion></Profesion>
+    <Loot>1</Loot>
+    <Stack>10</Stack>
+  </Item>
+  <Item>
+    <ID>11</ID>
+    <ItemName>Leather</ItemName>
+    <Type>Usable</Type>
+    <Subtype></Subtype>
+    <Stats></Stats>
+    <StatValues></StatValues>
+    <Chance></Chance>
+    <CraftItem></CraftItem>
+    <NumberOfItems></NumberOfItems>
+    <Quantity></Quantity>
+    <Profesion></Profesion>
+    <Loot>1</Loot>
+    <Stack>10</Stack>
+  </Item>
+  <Item>
+    <ID>12</ID>
+    <ItemName>Coconut</ItemName>
+    <Type>Usable</Type>
+    <Subtype></Subtype>
+    <Stats></Stats>
+    <StatValues></StatValues>
+    <Chance></Chance>
+    <CraftItem></CraftItem>
+    <NumberOfItems></NumberOfItems>
+    <Quantity></Quantity>
+    <Profesion></Profesion>
+    <Loot>2</Loot>
+    <Stack>10</Stack>
+  </Item>
+  <Item>
+    <ID>13</ID>
+    <ItemName>Sugar crane</ItemName>
+    <Type>Usable</Type>
+    <Subtype></Subtype>
+    <Stats></Stats>
+    <StatValues></StatValues>
+    <Chance></Chance>
+    <CraftItem></CraftItem>
+    <NumberOfItems></NumberOfItems>
+    <Quantity></Quantity>
+    <Profesion></Profesion>
+    <Loot>2</Loot>
+    <Stack>10</Stack>
+  </Item>
+  <Item>
+    <ID>15</ID>
+    <ItemName>Coconut</ItemName>
+    <Type>Usable</Type>
+    <Subtype></Subtype>
+    <Stats></Stats>
+    <StatValues></StatValues>
+    <Chance></Chance>
+    <CraftItem></CraftItem>
+    <NumberOfItems></NumberOfItems>
+    <Quantity></Quantity>
+    <Profesion></Profesion>
+    <Loot>2</Loot>
+    <Stack>10</Stack>
+  </Item>
+  <Item>
+    <ID>16</ID>
+    <ItemName>Bucket of water</ItemName>
+    <Type>Usable</Type>
+    <Subtype></Subtype>
+    <Stats></Stats>
+    <StatValues></StatValues>
+    <Chance></Chance>
+    <CraftItem></CraftItem>
+    <NumberOfItems></NumberOfItems>
+    <Quantity></Quantity>
+    <Profesion></Profesion>
+    <Loot></Loot>
+    <Stack>10</Stack>
+  </Item>
+  <Item>
+    <ID>17</ID>
+    <ItemName>Wheat</ItemName>
+    <Type>Usable</Type>
+    <Subtype></Subtype>
+    <Stats></Stats>
+    <StatValues></StatValues>
+    <Chance></Chance>
+    <CraftItem></CraftItem>
+    <NumberOfItems></NumberOfItems>
+    <Quantity></Quantity>
+    <Profesion></Profesion>
+    <Loot>2</Loot>
+    <Stack>20</Stack>
+  </Item>
+  <Item>
+    <ID>18</ID>
+    <ItemName>Tomato</ItemName>
+    <Type>Usable</Type>
+    <Subtype></Subtype>
+    <Stats></Stats>
+    <StatValues></StatValues>
+    <Chance></Chance>
+    <CraftItem></CraftItem>
+    <NumberOfItems></NumberOfItems>
+    <Quantity></Quantity>
+    <Profesion></Profesion>
+    <Loot>2</Loot>
+    <Stack>10</Stack>
+  </Item>
+  <Item>
+    <ID>19</ID>
+    <ItemName>Cheese</ItemName>
+    <Type>Usable</Type>
+    <Subtype></Subtype>
+    <Stats></Stats>
+    <StatValues></StatValues>
+    <Chance></Chance>
+    <CraftItem></CraftItem>
+    <NumberOfItems></NumberOfItems>
+    <Quantity></Quantity>
+    <Profesion></Profesion>
+    <Loot>1</Loot>
+    <Stack>10</Stack>
+  </Item>
+  <Item>
+    <ID>20</ID>
+    <ItemName>Silver ore</ItemName>
+    <Type>Usable</Type>
+    <Subtype></Subtype>
+    <Stats></Stats>
+    <StatValues></StatValues>
+    <Chance></Chance>
+    <CraftItem></CraftItem>
+    <NumberOfItems></NumberOfItems>
+    <Quantity></Quantity>
+    <Profesion></Profesion>
+    <Loot>1</Loot>
+    <Stack>10</Stack>
+  </Item>
+  <!-- #EndRegion -->
+
+  <!-- #Region Consumable -->
+  <Item>
+    <ID>100</ID>
+    <ItemName>Banana</ItemName>
+    <Type>Consumable</Type>
+    <Subtype></Subtype>
+    <Stats>Consumable</Stats>
+    <StatValues>20</StatValues>
+    <Chance></Chance>
+    <CraftItem></CraftItem>
+    <NumberOfItems></NumberOfItems>
+    <Quantity></Quantity>
+    <Profesion></Profesion>
+    <Loot>3</Loot>
+    <Stack>10</Stack>
+  </Item>
+  <Item>
+    <ID>101</ID>
+    <ItemName>Apple</ItemName>
+    <Type>Consumable</Type>
+    <Subtype></Subtype>
+    <Stats>Consumable</Stats>
+    <StatValues>15</StatValues>
+    <Chance></Chance>
+    <CraftItem></CraftItem>
+    <NumberOfItems></NumberOfItems>
+    <Quantity></Quantity>
+    <Profesion></Profesion>
+    <Loot>2</Loot>
+    <Stack>10</Stack>
+  </Item>
+  <Item>
+    <ID>102</ID>
+    <ItemName>Anchovy</ItemName>
+    <Type>Consumable</Type>
+    <Subtype></Subtype>
+    <Stats>Consumable</Stats>
+    <StatValues>15</StatValues>
+    <Chance></Chance>
+    <CraftItem>302</CraftItem>
+    <NumberOfItems>1</NumberOfItems>
+    <Quantity></Quantity>
+    <Profesion></Profesion>
+    <Loot>2</Loot>
+    <Stack>10</Stack>
+  </Item>
+  <Item>
+    <ID>103</ID>
+    <ItemName>Sardine</ItemName>
+    <Type>Consumable</Type>
+    <Subtype></Subtype>
+    <Stats>Consumable</Stats>
+    <StatValues>10</StatValues>
+    <Chance></Chance>
+    <CraftItem>300</CraftItem>
+    <NumberOfItems>1</NumberOfItems>
+    <Quantity>1</Quantity>
+    <Profesion>Cooking</Profesion>
+    <Loot></Loot>
+    <Stack>10</Stack>
+  </Item>
+  <Item>
+    <ID>104</ID>
+    <ItemName>Herring</ItemName>
+    <Type>Consumable</Type>
+    <Subtype></Subtype>
+    <Stats>Consumable</Stats>
+    <StatValues>15</StatValues>
+    <Chance></Chance>
+    <CraftItem>301</CraftItem>
+    <NumberOfItems>1</NumberOfItems>
+    <Quantity>1</Quantity>
+    <Profesion>Cooking</Profesion>
+    <Loot></Loot>
+    <Stack>10</Stack>
+  </Item>
+  <Item>
+    <ID>105</ID>
+    <ItemName>Trout</ItemName>
+    <Type>Consumable</Type>
+    <Subtype></Subtype>
+    <Stats>Consumable</Stats>
+    <StatValues>20</StatValues>
+    <Chance></Chance>
+    <CraftItem>303</CraftItem>
+    <NumberOfItems>1</NumberOfItems>
+    <Quantity>1</Quantity>
+    <Profesion>Cooking</Profesion>
+    <Loot></Loot>
+    <Stack>10</Stack>
+  </Item>
+  <Item>
+    <ID>106</ID>
+    <ItemName>Salmon</ItemName>
+    <Type>Consumable</Type>
+    <Subtype></Subtype>
+    <Stats>Consumable</Stats>
+    <StatValues>25</StatValues>
+    <Chance></Chance>
+    <CraftItem>304</CraftItem>
+    <NumberOfItems>1</NumberOfItems>
+    <Quantity>1</Quantity>
+    <Profesion>Cooking</Profesion>
+    <Loot></Loot>
+    <Stack>10</Stack>
+  </Item>
+  <Item>
+    <ID>107</ID>
+    <ItemName>Tuna</ItemName>
+    <Type>Consumable</Type>
+    <Subtype></Subtype>
+    <Stats>Consumable</Stats>
+    <StatValues>30</StatValues>
+    <Chance></Chance>
+    <CraftItem>305</CraftItem>
+    <NumberOfItems>1</NumberOfItems>
+    <Quantity>1</Quantity>
+    <Profesion>Cooking</Profesion>
+    <Loot></Loot>
+    <Stack>10</Stack>
+  </Item>
+  <Item>
+    <ID>108</ID>
+    <ItemName>Shark</ItemName>
+    <Type>Consumable</Type>
+    <Subtype></Subtype>
+    <Stats>Consumable</Stats>
+    <StatValues>50</StatValues>
+    <Chance></Chance>
+    <CraftItem>306</CraftItem>
+    <NumberOfItems>1</NumberOfItems>
+    <Quantity>1</Quantity>
+    <Profesion>Cooking</Profesion>
+    <Loot></Loot>
+    <Stack>10</Stack>
+  </Item>
+  <Item>
+    <ID>109</ID>
+    <ItemName>Tiger shark</ItemName>
+    <Type>Consumable</Type>
+    <Subtype></Subtype>
+    <Stats>Consumable</Stats>
+    <StatValues>100</StatValues>
+    <Chance></Chance>
+    <CraftItem>307</CraftItem>
+    <NumberOfItems>1</NumberOfItems>
+    <Quantity>1</Quantity>
+    <Profesion>Cooking</Profesion>
+    <Loot></Loot>
+    <Stack>10</Stack>
+  </Item>
+  <Item>
+    <ID>110</ID>
+    <ItemName>Coconut milk</ItemName>
+    <Type>Consumable</Type>
+    <Subtype></Subtype>
+    <Stats>Consumable</Stats>
+    <StatValues>10</StatValues>
+    <Chance></Chance>
+    <CraftItem>12</CraftItem>
+    <!--Coconut -->
+    <NumberOfItems>1</NumberOfItems>
+    <Quantity>2</Quantity>
+    <Profesion>Cooking</Profesion>
+    <Loot></Loot>
+    <Stack>10</Stack>
+  </Item>
+  <Item>
+    <ID>111</ID>
+    <ItemName>Bread</ItemName>
+    <Type>Consumable</Type>
+    <Subtype></Subtype>
+    <Stats>Consumable</Stats>
+    <StatValues>40</StatValues>
+    <Chance></Chance>
+    <CraftItem>207</CraftItem>
+    <!--Bread dough-->
+    <NumberOfItems>1</NumberOfItems>
+    <Quantity>1</Quantity>
+    <Profesion>Cooking</Profesion>
+    <Loot></Loot>
+    <Stack>10</Stack>
+  </Item>
+  <Item>
+    <ID>112</ID>
+    <ItemName>Basic pizza</ItemName>
+    <Type>Consumable</Type>
+    <Subtype></Subtype>
+    <Stats>Consumable</Stats>
+    <StatValues>50</StatValues>
+    <Chance></Chance>
+    <CraftItem>208,18,19</CraftItem>
+    <!--Pizza dough, Tomato, Cheese -->
+    <NumberOfItems>1,2,1</NumberOfItems>
+    <Quantity>1</Quantity>
+    <Profesion>Cooking</Profesion>
+    <Loot></Loot>
+    <Stack>10</Stack>
+  </Item>
+  <Item>
+    <ID>113</ID>
+    <ItemName>Anchovy pizza</ItemName>
+    <Type>Consumable</Type>
+    <Subtype></Subtype>
+    <Stats>Consumable</Stats>
+    <StatValues>70</StatValues>
+    <Chance></Chance>
+    <CraftItem>208,18,19,102</CraftItem>
+    <!--Pizza dough, Tomato, Cheese, Anchovy -->
+    <NumberOfItems>1,2,2,2</NumberOfItems>
+    <Quantity>1</Quantity>
+    <Profesion>Cooking</Profesion>
+    <Loot></Loot>
+    <Stack>10</Stack>
+  </Item>
+  <!-- #EndRegion -->
+
+  <!-- #Region Crafting -->
+  <Item>
+    <ID>200</ID>
+    <ItemName>Stick</ItemName>
+    <Type>Usable</Type>
+    <Subtype></Subtype>
+    <Stats></Stats>
+    <StatValues></StatValues>
+    <Chance></Chance>
+    <CraftItem>2</CraftItem>
+    <!--Wood-->
+    <NumberOfItems>1</NumberOfItems>
+    <Quantity>3</Quantity>
+    <Profesion>Crafting</Profesion>
+    <Loot></Loot>
+    <Stack>20</Stack>
+  </Item>
+  <Item>
+    <ID>201</ID>
+    <ItemName>Torch</ItemName>
+    <Type>Usable</Type>
+    <Subtype></Subtype>
+    <Stats></Stats>
+    <StatValues></StatValues>
+    <Chance></Chance>
+    <CraftItem>200,3</CraftItem>
+    <!--Stick, Coal-->
+    <NumberOfItems>1,1</NumberOfItems>
+    <Quantity>2</Quantity>
+    <Profesion>Crafting</Profesion>
+    <Loot></Loot>
+    <Stack>10</Stack>
+  </Item>
+  <Item>
+    <ID>202</ID>
+    <ItemName>Arrow</ItemName>
+    <Type>Ammo</Type>
+    <Subtype></Subtype>
+    <Stats></Stats>
+    <StatValues></StatValues>
+    <Chance></Chance>
+    <CraftItem>200,8</CraftItem>
+    <!--Stick, Flint-->
+    <NumberOfItems>1,1</NumberOfItems>
+    <Quantity>4</Quantity>
+    <Profesion>Crafting</Profesion>
+    <Loot>2</Loot>
+    <Stack>25</Stack>
+  </Item>
+  <Item>
+    <ID>203</ID>
+    <ItemName>Long bow</ItemName>
+    <Type>Weapon</Type>
+    <Subtype>Bow</Subtype>
+    <Stats>Damage</Stats>
+    <StatValues>60</StatValues>
+    <Chance></Chance>
+    <CraftItem>10,200</CraftItem>
+    <!--String, Stick-->
+    <NumberOfItems>3,5</NumberOfItems>
+    <Quantity>1</Quantity>
+    <Profesion>Crafting</Profesion>
+    <Loot></Loot>
+    <Stack>1</Stack>
+  </Item>
+  <Item>
+    <ID>204</ID>
+    <ItemName>Sugar</ItemName>
+    <Type>Usable</Type>
+    <Subtype></Subtype>
+    <Stats></Stats>
+    <StatValues></StatValues>
+    <Chance></Chance>
+    <CraftItem>13</CraftItem>
+    <!--Sugar crane-->
+    <NumberOfItems>1</NumberOfItems>
+    <Quantity>2</Quantity>
+    <Profesion>Crafting</Profesion>
+    <Loot></Loot>
+    <Stack>10</Stack>
+  </Item>
+  <Item>
+    <ID>205</ID>
+    <ItemName>Bucket</ItemName>
+    <Type>Usable</Type>
+    <Subtype></Subtype>
+    <Stats></Stats>
+    <StatValues></StatValues>
+    <Chance></Chance>
+    <CraftItem>2</CraftItem>
+    <!--Wood-->
+    <NumberOfItems>1</NumberOfItems>
+    <Quantity>2</Quantity>
+    <Profesion>Crafting</Profesion>
+    <Loot></Loot>
+    <Stack>10</Stack>
+  </Item>
+  <Item>
+    <ID>206</ID>
+    <ItemName>Flour</ItemName>
+    <Type>Usable</Type>
+    <Subtype></Subtype>
+    <Stats></Stats>
+    <StatValues></StatValues>
+    <Chance></Chance>
+    <CraftItem>17</CraftItem>
+    <!--Wheat-->
+    <NumberOfItems>1</NumberOfItems>
+    <Quantity>1</Quantity>
+    <Profesion>Crafting</Profesion>
+    <Loot></Loot>
+    <Stack>20</Stack>
+  </Item>
+  <Item>
+    <ID>207</ID>
+    <ItemName>Bread dough</ItemName>
+    <Type>Usable</Type>
+    <Subtype></Subtype>
+    <Stats></Stats>
+    <StatValues></StatValues>
+    <Chance></Chance>
+    <CraftItem>206,16</CraftItem>
+    <!--flour,water-->
+    <NumberOfItems>2,1</NumberOfItems>
+    <Quantity>1</Quantity>
+    <Profesion>Crafting</Profesion>
+    <Loot></Loot>
+    <Stack>10</Stack>
+  </Item>
+  <Item>
+    <ID>208</ID>
+    <ItemName>Pizza dough</ItemName>
+    <Type>Usable</Type>
+    <Subtype></Subtype>
+    <Stats></Stats>
+    <StatValues></StatValues>
+    <Chance></Chance>
+    <CraftItem>206,16</CraftItem>
+    <!--flour,water-->
+    <NumberOfItems>2,1</NumberOfItems>
+    <Quantity>1</Quantity>
+    <Profesion>Crafting</Profesion>
+    <Loot></Loot>
+    <Stack>10</Stack>
+  </Item>
+  <!-- #EndRegion -->
+
+  <!-- #Region Fishing -->
+  <Item>
+    <ID>300</ID>
+    <ItemName>Raw sardine</ItemName>
+    <Type>Usable</Type>
+    <Subtype></Subtype>
+    <Stats></Stats>
+    <StatValues></StatValues>
+    <Chance>20</Chance>
+    <CraftItem></CraftItem>
+    <NumberOfItems></NumberOfItems>
+    <Quantity></Quantity>
+    <Profesion>Fishing</Profesion>
+    <Loot>1</Loot>
+    <Stack>10</Stack>
+  </Item>
+  <Item>
+    <ID>301</ID>
+    <ItemName>Raw herring</ItemName>
+    <Type>Usable</Type>
+    <Subtype></Subtype>
+    <Stats></Stats>
+    <StatValues></StatValues>
+    <Chance>17</Chance>
+    <CraftItem></CraftItem>
+    <NumberOfItems></NumberOfItems>
+    <Quantity></Quantity>
+    <Profesion>Fishing</Profesion>
+    <Loot>1</Loot>
+    <Stack>10</Stack>
+  </Item>
+  <Item>
+    <ID>302</ID>
+    <ItemName>Raw anchovy</ItemName>
+    <Type>Usable</Type>
+    <Subtype></Subtype>
+    <Stats></Stats>
+    <StatValues></StatValues>
+    <Chance>17</Chance>
+    <CraftItem></CraftItem>
+    <NumberOfItems></NumberOfItems>
+    <Quantity></Quantity>
+    <Profesion>Fishing</Profesion>
+    <Loot>1</Loot>
+    <Stack>10</Stack>
+  </Item>
+  <Item>
+    <ID>303</ID>
+    <ItemName>Raw trout</ItemName>
+    <Type>Usable</Type>
+    <Subtype></Subtype>
+    <Stats></Stats>
+    <StatValues></StatValues>
+    <Chance>10</Chance>
+    <CraftItem></CraftItem>
+    <NumberOfItems></NumberOfItems>
+    <Quantity></Quantity>
+    <Profesion>Fishing</Profesion>
+    <Loot>1</Loot>
+    <Stack>10</Stack>
+  </Item>
+  <Item>
+    <ID>304</ID>
+    <ItemName>Raw salmon</ItemName>
+    <Type>Usable</Type>
+    <Subtype></Subtype>
+    <Stats></Stats>
+    <StatValues></StatValues>
+    <Chance>10</Chance>
+    <CraftItem></CraftItem>
+    <NumberOfItems></NumberOfItems>
+    <Quantity></Quantity>
+    <Profesion>Fishing</Profesion>
+    <Loot>1</Loot>
+    <Stack>10</Stack>
+  </Item>
+  <Item>
+    <ID>305</ID>
+    <ItemName>Raw tuna</ItemName>
+    <Type>Usable</Type>
+    <Subtype></Subtype>
+    <Stats></Stats>
+    <StatValues></StatValues>
+    <Chance>10</Chance>
+    <CraftItem></CraftItem>
+    <NumberOfItems></NumberOfItems>
+    <Quantity></Quantity>
+    <Profesion>Fishing</Profesion>
+    <Loot>1</Loot>
+    <Stack>10</Stack>
+  </Item>
+  <Item>
+    <ID>306</ID>
+    <ItemName>Raw shark</ItemName>
+    <Type>Usable</Type>
+    <Subtype></Subtype>
+    <Stats></Stats>
+    <StatValues></StatValues>
+    <Chance>5</Chance>
+    <CraftItem></CraftItem>
+    <NumberOfItems></NumberOfItems>
+    <Quantity></Quantity>
+    <Profesion>Fishing</Profesion>
+    <Loot>1</Loot>
+    <Stack>10</Stack>
+  </Item>
+  <Item>
+    <ID>307</ID>
+    <ItemName>Raw tiger shark</ItemName>
+    <Type>Usable</Type>
+    <Subtype></Subtype>
+    <Stats></Stats>
+    <StatValues></StatValues>
+    <Chance>1</Chance>
+    <CraftItem></CraftItem>
+    <NumberOfItems></NumberOfItems>
+    <Quantity></Quantity>
+    <Profesion>Fishing</Profesion>
+    <Loot>1</Loot>
+    <Stack>10</Stack>
+  </Item>
+  <!-- #EndRegion -->
+
+  <!-- #Region Smithing(bars) -->
+  <Item>
+    <ID>400</ID>
+    <ItemName>Iron bar</ItemName>
+    <Type>Usable</Type>
+    <Subtype></Subtype>
+    <Stats></Stats>
+    <StatValues></StatValues>
+    <Chance></Chance>
+    <CraftItem>9,3</CraftItem>
+    <!--Iron ore, Coal-->
+    <NumberOfItems>2,2</NumberOfItems>
+    <Quantity>1</Quantity>
+    <Profesion>Smithing</Profesion>
+    <Loot></Loot>
+    <Stack>10</Stack>
+  </Item>
+  <Item>
+    <ID>401</ID>
+    <ItemName>Silver bar</ItemName>
+    <Type>Usable</Type>
+    <Subtype></Subtype>
+    <Stats></Stats>
+    <StatValues></StatValues>
+    <Chance></Chance>
+    <CraftItem>20,3</CraftItem>
+    <!-- Silver ore, Coal -->
+    <NumberOfItems>2,2</NumberOfItems>
+    <Quantity>1</Quantity>
+    <Profesion>Smithing</Profesion>
+    <Loot></Loot>
+    <Stack>10</Stack>
+  </Item>
+  <Item>
+    <ID>402</ID>
+    <ItemName>Amulet of defence</ItemName>
+    <Type>Armour</Type>
+    <Subtype>Neck</Subtype>
+    <Stats>Health</Stats>
+    <StatValues>30</StatValues>
+    <Chance></Chance>
+    <CraftItem>401</CraftItem>
+    <!-- Silver bar -->
+    <NumberOfItems>1</NumberOfItems>
+    <Quantity>1</Quantity>
+    <Profesion>Smithing</Profesion>
+    <Loot></Loot>
+    <Stack>1</Stack>
+  </Item>
+  <Item>
+    <ID>403</ID>
+    <ItemName>Amulet of nature</ItemName>
+    <Type>Armour</Type>
+    <Subtype>Neck</Subtype>
+    <Stats>Health</Stats>
+    <StatValues>40</StatValues>
+    <Chance></Chance>
+    <CraftItem>401</CraftItem>
+    <!-- Silver bar -->
+    <NumberOfItems>1</NumberOfItems>
+    <Quantity>1</Quantity>
+    <Profesion>Smithing</Profesion>
+    <Loot></Loot>
+    <Stack>1</Stack>
+  </Item>
+  <Item>
+    <ID>404</ID>
+    <ItemName>Amulet of blood</ItemName>
+    <Type>Armour</Type>
+    <Subtype>Neck</Subtype>
+    <Stats>Health,Damage</Stats>
+    <StatValues>40,5</StatValues>
+    <Chance></Chance>
+    <CraftItem>401</CraftItem>
+    <!-- Silver bar -->
+    <NumberOfItems>1</NumberOfItems>
+    <Quantity>1</Quantity>
+    <Profesion>Smithing</Profesion>
+    <Loot></Loot>
+    <Stack>1</Stack>
+  </Item>
+  <Item>
+    <ID>405</ID>
+    <ItemName>Golden necklace</ItemName>
+    <Type>Armour</Type>
+    <Subtype>Neck</Subtype>
+    <Stats>Damage</Stats>
+    <StatValues>15</StatValues>
+    <Chance></Chance>
+    <CraftItem>401</CraftItem>    <!-- Silver bar -->
+    <NumberOfItems>1</NumberOfItems>
+    <Quantity>1</Quantity>
+    <Profesion>Smithing</Profesion>
+    <Loot></Loot>
+    <Stack>1</Stack>
+  </Item>
+  <Item>
+    <ID>405</ID>
+    <ItemName>Ring of animals power</ItemName>
+    <Type>Armour</Type>
+    <Subtype>Ring</Subtype>
+    <Stats>Health</Stats>
+    <StatValues>20</StatValues>
+    <Chance></Chance>
+    <CraftItem>401</CraftItem>    <!-- Silver bar -->
+    <NumberOfItems>1</NumberOfItems>
+    <Quantity>1</Quantity>
+    <Profesion>Smithing</Profesion>
+    <Loot></Loot>
+    <Stack>1</Stack>
+  </Item>
+  <Item>
+    <ID>406</ID>
+    <ItemName>Ring of prayer</ItemName>
+    <Type>Armour</Type>
+    <Subtype>Ring</Subtype>
+    <Stats>Health</Stats>
+    <StatValues>30</StatValues>
+    <Chance></Chance>
+    <CraftItem>401</CraftItem>    <!-- Silver bar -->
+    <NumberOfItems>1</NumberOfItems>
+    <Quantity>1</Quantity>
+    <Profesion>Smithing</Profesion>
+    <Loot></Loot>
+    <Stack>1</Stack>
+  </Item>
+  <Item>
+    <ID>407</ID>
+    <ItemName>Pirate ring</ItemName>
+    <Type>Armour</Type>
+    <Subtype>Ring</Subtype>
+    <Stats>Health,Damage</Stats>
+    <StatValues>40,5</StatValues>
+    <Chance></Chance>
+    <CraftItem>401</CraftItem>    <!-- Silver bar -->
+    <NumberOfItems>1</NumberOfItems>
+    <Quantity>1</Quantity>
+    <Profesion>Smithing</Profesion>
+    <Loot></Loot>
+    <Stack>1</Stack>
+  </Item>
+  <Item>
+    <ID>408</ID>
+    <ItemName>Ancient ring</ItemName>
+    <Type>Armour</Type>
+    <Subtype>Ring</Subtype>
+    <Stats>Damage</Stats>
+    <StatValues>25</StatValues>
+    <Chance></Chance>
+    <CraftItem>401</CraftItem>    <!-- Silver bar -->
+    <NumberOfItems>1</NumberOfItems>
+    <Quantity>1</Quantity>
+    <Profesion>Smithing</Profesion>
+    <Loot></Loot>
+    <Stack>1</Stack>
+  </Item>
+  <Item>
+    <ID>409</ID>
+    <ItemName>Golden ring</ItemName>
+    <Type>Armour</Type>
+    <Subtype>Ring</Subtype>
+    <Stats>Health,Damage</Stats>
+    <StatValues>70,15</StatValues>
+    <Chance></Chance>
+    <CraftItem>401</CraftItem>    <!-- Silver bar -->
+    <NumberOfItems>1</NumberOfItems>
+    <Quantity>1</Quantity>
+    <Profesion>Smithing</Profesion>
+    <Loot></Loot>
+    <Stack>1</Stack>
+  </Item>
+  <!-- #EndRegion -->
+
+  <!-- #Region Weapon -->
+  <Item>
+    <ID>500</ID>
+    <ItemName>Wooden sword</ItemName>
+    <Type>Weapon</Type>
+    <Subtype>Sword</Subtype>
+    <Stats>Damage</Stats>
+    <StatValues>5</StatValues>
+    <Chance></Chance>
+    <CraftItem>2,200</CraftItem>
+    <!--Wood, Stick-->
+    <NumberOfItems>2,1</NumberOfItems>
+    <Quantity>1</Quantity>
+    <Profesion>Smithing</Profesion>
+    <Loot></Loot>
+    <Stack>1</Stack>
+  </Item>
+  <Item>
+    <ID>501</ID>
+    <ItemName>Machete</ItemName>
+    <Type>Weapon</Type>
+    <Subtype>Sword</Subtype>
+    <Stats>Damage</Stats>
+    <StatValues>8</StatValues>
+    <Chance></Chance>
+    <CraftItem>400,200</CraftItem>
+    <!--Iron bar, Stick-->
+    <NumberOfItems>2,1</NumberOfItems>
+    <Quantity>1</Quantity>
+    <Profesion>Smithing</Profesion>
+    <Loot></Loot>
+    <Stack>1</Stack>
+  </Item>
+  <Item>
+    <ID>502</ID>
+    <ItemName>Iron axe</ItemName>
+    <Type>Weapon</Type>
+    <Subtype>Axe</Subtype>
+    <Stats>Damage,Health</Stats>
+    <StatValues>15,10</StatValues>
+    <Chance></Chance>
+    <CraftItem>400,200</CraftItem>
+    <!--Iron bar, Stick-->
+    <NumberOfItems>3,2</NumberOfItems>
+    <Quantity>1</Quantity>
+    <Profesion>Smithing</Profesion>
+    <Loot></Loot>
+    <Stack>1</Stack>
+  </Item>
+  <Item>
+    <ID>503</ID>
+    <ItemName>Spear</ItemName>
+    <Type>Weapon</Type>
+    <Subtype>Spear</Subtype>
+    <Stats>Damage,Health</Stats>
+    <StatValues>15,10</StatValues>
+    <Chance></Chance>
+    <CraftItem>400,200</CraftItem>
+    <!--Iron bar, Stick-->
+    <NumberOfItems>2,4</NumberOfItems>
+    <Quantity>1</Quantity>
+    <Profesion>Smithing</Profesion>
+    <Loot></Loot>
+    <Stack>1</Stack>
+  </Item>
+  <Item>
+    <ID>504</ID>
+    <ItemName>Knife</ItemName>
+    <Type>Weapon</Type>
+    <Subtype>Knife</Subtype>
+    <Stats>Damage</Stats>
+    <StatValues>5</StatValues>
+    <Chance></Chance>
+    <CraftItem>400,200</CraftItem>
+    <!--Iron bar, Stick-->
+    <NumberOfItems>2,1</NumberOfItems>
+    <Quantity>1</Quantity>
+    <Profesion>Smithing</Profesion>
+    <Loot></Loot>
+    <Stack>1</Stack>
+  </Item>
+  <Item>
+    <ID>505</ID>
+    <ItemName>Iron sword</ItemName>
+    <Type>Weapon</Type>
+    <Subtype>Sword</Subtype>
+    <Stats>Damage,Health</Stats>
+    <StatValues>18,15</StatValues>
+    <Chance></Chance>
+    <CraftItem>400,200</CraftItem>
+    <!--Iron bar, Stick-->
+    <NumberOfItems>5,2</NumberOfItems>
+    <Quantity>1</Quantity>
+    <Profesion>Smithing</Profesion>
+    <Loot></Loot>
+    <Stack>1</Stack>
+  </Item>
+  <!-- #EndRegion -->
+
+  <!-- #Region Armour -->
+  <Item>
+    <ID>1000</ID>
+    <ItemName>Cloth head</ItemName>
+    <Type>Armour</Type>
+    <Subtype>Head</Subtype>
+    <Stats>Health</Stats>
+    <StatValues>5</StatValues>
+    <Chance></Chance>
+    <CraftItem>4,7</CraftItem>
+    <!-- Cloth, thread -->
+    <NumberOfItems>3,2</NumberOfItems>
+    <Quantity>1</Quantity>
+    <Profesion>Tailoring</Profesion>
+    <Loot></Loot>
+    <Stack>1</Stack>
+  </Item>
+  <Item>
+    <ID>1001</ID>
+    <ItemName>Cloth chest</ItemName>
+    <Type>Armour</Type>
+    <Subtype>Chest</Subtype>
+    <Stats>Health</Stats>
+    <StatValues>7</StatValues>
+    <Chance></Chance>
+    <CraftItem>4,7</CraftItem>
+    <!-- Cloth, thread -->
+    <NumberOfItems>5,2</NumberOfItems>
+    <Quantity>1</Quantity>
+    <Profesion>Tailoring</Profesion>
+    <Loot></Loot>
+    <Stack>1</Stack>
+  </Item>
+  <Item>
+    <ID>1002</ID>
+    <ItemName>Cloth legs</ItemName>
+    <Type>Armour</Type>
+    <Subtype>Legs</Subtype>
+    <Stats>Health</Stats>
+    <StatValues>6</StatValues>
+    <Chance></Chance>
+    <CraftItem>4,7</CraftItem>
+    <!-- Cloth, thread -->
+    <NumberOfItems>4,2</NumberOfItems>
+    <Quantity>1</Quantity>
+    <Profesion>Tailoring</Profesion>
+    <Loot></Loot>
+    <Stack>1</Stack>
+  </Item>
+  <Item>
+    <ID>1003</ID>
+    <ItemName>Cloth hands</ItemName>
+    <Type>Armour</Type>
+    <Subtype>Hands</Subtype>
+    <Stats>Health</Stats>
+    <StatValues>3</StatValues>
+    <Chance></Chance>
+    <CraftItem>4,7</CraftItem>
+    <!-- Cloth, thread -->
+    <NumberOfItems>2,1</NumberOfItems>
+    <Quantity>1</Quantity>
+    <Profesion>Tailoring</Profesion>
+    <Loot></Loot>
+    <Stack>1</Stack>
+  </Item>
+  <Item>
+    <ID>1004</ID>
+    <ItemName>Cloth boots</ItemName>
+    <Type>Armour</Type>
+    <Subtype>Boots</Subtype>
+    <Stats>Health</Stats>
+    <StatValues>4</StatValues>
+    <Chance></Chance>
+    <CraftItem>4,7</CraftItem>
+    <!-- Cloth, thread -->
+    <NumberOfItems>3,1</NumberOfItems>
+    <Quantity>1</Quantity>
+    <Profesion>Tailoring</Profesion>
+    <Loot></Loot>
+    <Stack>1</Stack>
+  </Item>
+  <Item>
+    <ID>1005</ID>
+    <ItemName>Wool head</ItemName>
+    <Type>Armour</Type>
+    <Subtype>Head</Subtype>
+    <Stats>Health</Stats>
+    <StatValues>12</StatValues>
+    <Chance></Chance>
+    <CraftItem>5,7</CraftItem>
+    <!-- Wool, thread -->
+    <NumberOfItems>3,4</NumberOfItems>
+    <Quantity>1</Quantity>
+    <Profesion>Tailoring</Profesion>
+    <Loot></Loot>
+    <Stack>1</Stack>
+  </Item>
+  <Item>
+    <ID>1006</ID>
+    <ItemName>Wool chest</ItemName>
+    <Type>Armour</Type>
+    <Subtype>Chest</Subtype>
+    <Stats>Health</Stats>
+    <StatValues>15</StatValues>
+    <Chance></Chance>
+    <CraftItem>5,7</CraftItem>
+    <!-- Wool, thread -->
+    <NumberOfItems>5,4</NumberOfItems>
+    <Quantity>1</Quantity>
+    <Profesion>Tailoring</Profesion>
+    <Loot></Loot>
+    <Stack>1</Stack>
+  </Item>
+  <Item>
+    <ID>1007</ID>
+    <ItemName>Wool legs</ItemName>
+    <Type>Armour</Type>
+    <Subtype>Legs</Subtype>
+    <Stats>Health</Stats>
+    <StatValues>13</StatValues>
+    <Chance></Chance>
+    <CraftItem>5,7</CraftItem>
+    <!-- Wool, thread -->
+    <NumberOfItems>4,4</NumberOfItems>
+    <Quantity>1</Quantity>
+    <Profesion>Tailoring</Profesion>
+    <Loot></Loot>
+    <Stack>1</Stack>
+  </Item>
+  <Item>
+    <ID>1008</ID>
+    <ItemName>Wool hands</ItemName>
+    <Type>Armour</Type>
+    <Subtype>Hands</Subtype>
+    <Stats>Health</Stats>
+    <StatValues>6</StatValues>
+    <Chance></Chance>
+    <CraftItem>5,7</CraftItem>
+    <!-- Wool, thread -->
+    <NumberOfItems>1,2</NumberOfItems>
+    <Quantity>1</Quantity>
+    <Profesion>Tailoring</Profesion>
+    <Loot></Loot>
+    <Stack>1</Stack>
+  </Item>
+  <Item>
+    <ID>1009</ID>
+    <ItemName>Wool boots</ItemName>
+    <Type>Armour</Type>
+    <Subtype>Boots</Subtype>
+    <Stats>Health</Stats>
+    <StatValues>9</StatValues>
+    <Chance></Chance>
+    <CraftItem>5,7</CraftItem>
+    <!-- Wool, thread -->
+    <NumberOfItems>2,2</NumberOfItems>
+    <Quantity>1</Quantity>
+    <Profesion>Tailoring</Profesion>
+    <Loot></Loot>
+    <Stack>1</Stack>
+  </Item>
+  <Item>
+    <ID>1010</ID>
+    <ItemName>Tiger leather head</ItemName>
+    <Type>Armour</Type>
+    <Subtype>Head</Subtype>
+    <Stats>Health</Stats>
+    <StatValues>20</StatValues>
+    <Chance></Chance>
+    <CraftItem>6,7</CraftItem>
+    <!-- Tiger leather, thread -->
+    <NumberOfItems>3,6</NumberOfItems>
+    <Quantity>1</Quantity>
+    <Profesion>Tailoring</Profesion>
+    <Loot></Loot>
+    <Stack>1</Stack>
+  </Item>
+  <Item>
+    <ID>1011</ID>
+    <ItemName>Tiger leather chest</ItemName>
+    <Type>Armour</Type>
+    <Subtype>Chest</Subtype>
+    <Stats>Health</Stats>
+    <StatValues>28</StatValues>
+    <Chance></Chance>
+    <CraftItem>6,7</CraftItem>
+    <!-- Tiger leather, thread -->
+    <NumberOfItems>5,6</NumberOfItems>
+    <Quantity>1</Quantity>
+    <Profesion>Tailoring</Profesion>
+    <Loot></Loot>
+    <Stack>1</Stack>
+  </Item>
+  <Item>
+    <ID>1012</ID>
+    <ItemName>Tiger leather legs</ItemName>
+    <Type>Armour</Type>
+    <Subtype>Legs</Subtype>
+    <Stats>Health</Stats>
+    <StatValues>26</StatValues>
+    <Chance></Chance>
+    <CraftItem>6,7</CraftItem>
+    <!-- Tiger leather, thread -->
+    <NumberOfItems>4,6</NumberOfItems>
+    <Quantity>1</Quantity>
+    <Profesion>Tailoring</Profesion>
+    <Loot></Loot>
+    <Stack>1</Stack>
+  </Item>
+  <Item>
+    <ID>1013</ID>
+    <ItemName>Tiger leather hands</ItemName>
+    <Type>Armour</Type>
+    <Subtype>Hands</Subtype>
+    <Stats>Health</Stats>
+    <StatValues>12</StatValues>
+    <Chance></Chance>
+    <CraftItem>6,7</CraftItem>
+    <!-- Tiger leather, thread -->
+    <NumberOfItems>1,4</NumberOfItems>
+    <Quantity>1</Quantity>
+    <Profesion>Tailoring</Profesion>
+    <Loot></Loot>
+    <Stack>1</Stack>
+  </Item>
+  <Item>
+    <ID>1014</ID>
+    <ItemName>Tiger leather boots</ItemName>
+    <Type>Armour</Type>
+    <Subtype>Boots</Subtype>
+    <Stats>Health</Stats>
+    <StatValues>17</StatValues>
+    <Chance></Chance>
+    <CraftItem>6,7</CraftItem>
+    <!-- Tiger leather, thread -->
+    <NumberOfItems>2,4</NumberOfItems>
+    <Quantity>1</Quantity>
+    <Profesion>Tailoring</Profesion>
+    <Loot></Loot>
+    <Stack>1</Stack>
+  </Item>
+  <Item>
+    <ID>1015</ID>
+    <ItemName>Cloth bracers</ItemName>
+    <Type>Armour</Type>
+    <Subtype>Bracers</Subtype>
+    <Stats>Health</Stats>
+    <StatValues>3</StatValues>
+    <Chance></Chance>
+    <CraftItem>4,7</CraftItem>
+    <!-- Cloth, thread -->
+    <NumberOfItems>3,2</NumberOfItems>
+    <Quantity>1</Quantity>
+    <Profesion>Tailoring</Profesion>
+    <Loot></Loot>
+    <Stack>1</Stack>
+  </Item>
+  <Item>
+    <ID>1016</ID>
+    <ItemName>Wool bracers</ItemName>
+    <Type>Armour</Type>
+    <Subtype>Bracers</Subtype>
+    <Stats>Health</Stats>
+    <StatValues>7</StatValues>
+    <Chance></Chance>
+    <CraftItem>5,7</CraftItem>
+    <!-- Wool, thread -->
+    <NumberOfItems>3,4</NumberOfItems>
+    <Quantity>1</Quantity>
+    <Profesion>Tailoring</Profesion>
+    <Loot></Loot>
+    <Stack>1</Stack>
+  </Item>
+  <Item>
+    <ID>1017</ID>
+    <ItemName>Tiger leather bracers</ItemName>
+    <Type>Armour</Type>
+    <Subtype>Bracers</Subtype>
+    <Stats>Health</Stats>
+    <StatValues>12</StatValues>
+    <Chance></Chance>
+    <CraftItem>6,7</CraftItem>
+    <!-- Tiger leather, thread -->
+    <NumberOfItems>3,6</NumberOfItems>
+    <Quantity>1</Quantity>
+    <Profesion>Tailoring</Profesion>
+    <Loot></Loot>
+    <Stack>1</Stack>
+  </Item>
+  <Item>
+    <ID>1018</ID>
+    <ItemName>Cloth waist</ItemName>
+    <Type>Armour</Type>
+    <Subtype>Waist</Subtype>
+    <Stats>Health</Stats>
+    <StatValues>3</StatValues>
+    <Chance></Chance>
+    <CraftItem>4,7</CraftItem>
+    <!-- Cloth, thread -->
+    <NumberOfItems>3,2</NumberOfItems>
+    <Quantity>1</Quantity>
+    <Profesion>Tailoring</Profesion>
+    <Loot></Loot>
+    <Stack>1</Stack>
+  </Item>
+  <Item>
+    <ID>1019</ID>
+    <ItemName>Wool waist</ItemName>
+    <Type>Armour</Type>
+    <Subtype>Waist</Subtype>
+    <Stats>Health</Stats>
+    <StatValues>7</StatValues>
+    <Chance></Chance>
+    <CraftItem>5,7</CraftItem>
+    <!-- Wool, thread -->
+    <NumberOfItems>3,4</NumberOfItems>
+    <Quantity>1</Quantity>
+    <Profesion>Tailoring</Profesion>
+    <Loot></Loot>
+    <Stack>1</Stack>
+  </Item>
+  <Item>
+    <ID>1020</ID>
+    <ItemName>Tiger leather waist</ItemName>
+    <Type>Armour</Type>
+    <Subtype>Waist</Subtype>
+    <Stats>Health</Stats>
+    <StatValues>12</StatValues>
+    <Chance></Chance>
+    <CraftItem>6,7</CraftItem>
+    <!-- Tiger leather, thread -->
+    <NumberOfItems>3,6</NumberOfItems>
+    <Quantity>1</Quantity>
+    <Profesion>Tailoring</Profesion>
+    <Loot></Loot>
+    <Stack>1</Stack>
+  </Item>
+  <!-- #EndRegion -->
+</Root>
