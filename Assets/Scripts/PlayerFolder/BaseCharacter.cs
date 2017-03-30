@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Assets.Scripts.PlayerFolder
 {
@@ -18,6 +19,7 @@ namespace Assets.Scripts.PlayerFolder
         private float _energyTimer;
         private readonly float _energyRegeneration;
 
+        
         public BaseCharacter(string name, float health, float energy)
         {
             Name = name;
@@ -66,15 +68,21 @@ namespace Assets.Scripts.PlayerFolder
             }
         }
 
-        public void DamageTaken(float damage)
+        /*public virtual void DamageDone(ref float health, float damage)
         {
-            if (EPlayerState == EPlayerState.Dead)
+            health -= damage;
+        }
+        */
+
+        public virtual void DamageTaken(EPlayerState eState, float damage)
+        {
+            if (eState == EPlayerState.Dead || EPlayerState == EPlayerState.Dead)
                 return;
             CurrentHealth -= damage;
             if (CurrentHealth <= 0)
             {
-                CurrentHealth = 0;
-                EPlayerState= EPlayerState.Dead;
+                EPlayerState = EPlayerState.Dead;           
+                CurrentHealth = 0;             
             }
         }
 
@@ -85,5 +93,8 @@ namespace Assets.Scripts.PlayerFolder
             Messenger<float>.Broadcast(name + "Energy", CurrentEnergy);
             Messenger<float>.Broadcast(name + "MaxEnergy", MaxEnergy);
         }
+
+        
     }
+    
 }

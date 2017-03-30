@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Assets.Scripts.CombatSystemFolder;
+﻿using Assets.Scripts.CombatSystemFolder;
 using UnityEngine;
 
 namespace Assets.Scripts.HUD
 {
-    public abstract class StatusBars
+    public class StatusBars:IPlayerStatusBar,ITargetStatusBar
     {
         private float currHealth;
         private float currEnergy;
@@ -16,15 +12,36 @@ namespace Assets.Scripts.HUD
         private const int ySize = 10;
         private const int maxBarLenght = 150;
         private GetStatusComponents _getComponents;
-        protected StatusBars(Canvas canvas)
+        private Canvas _canvas;
+        private string _name;
+        public StatusBars(Canvas canvas)
         {
             _getComponents = new GetStatusComponents(canvas);
+            _canvas = canvas;
+            _name = "";
         }
 
-        public virtual void Init(string name)
+        void IPlayerStatusBar.Init(string name)
         {
             AddListeners(name);
         }
+
+        void ITargetStatusBar.Init(string name)
+        {
+            if((_name == "" && TargetCharacter.TargetName != null))
+            {
+                _canvas.enabled = true;
+                AddListeners(name);
+                _name = name;
+            }
+            else if((_name != TargetCharacter.TargetName && _name != "") || (_name != "" && TargetCharacter.TargetName == null))
+            {
+                _canvas.enabled = false;
+                RemoveListeners(_name);
+                _name = "";
+            }
+        }
+
 
         protected void AddListeners(string name)
         {
@@ -75,5 +92,20 @@ namespace Assets.Scripts.HUD
             _getComponents.GetHealthText().text = (int)currHealth + "/" + (int)maxHealth + " Health";
             _getComponents.GetEnergyText().text = (int)currEnergy + "/" + (int)maxEnergy + " Energy";
         }
+
+    }
+
+    public interface IPlayerStatusBar
+    {
+        void Init(string name);
+        void SettingSizes();
+        void SettingText();
+    }
+
+    public interface ITargetStatusBar
+    {
+        void Init(string name);
+        void SettingSizes();
+        void SettingText();
     }
 }

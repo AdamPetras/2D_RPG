@@ -10,15 +10,13 @@ namespace Assets.Scripts.CombatSystemFolder
         Enemy
     }
 
-    public class CombSysComponent : MonoBehaviour
+    public class TargetComponent : MonoBehaviour
     {
 
         // Use this for initialization
-        private ETag _eTag;
         private TargetCharacter _targetCharacter;
         void Start()
         {
-            _eTag = (ETag)Enum.Parse(typeof(ETag), gameObject.tag);
             _targetCharacter = new TargetCharacter();
         }
 

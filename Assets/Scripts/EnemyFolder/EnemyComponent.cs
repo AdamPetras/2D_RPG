@@ -3,37 +3,43 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Assets.Scripts.CombatSystemFolder;
+using Assets.Scripts.PlayerFolder;
 using UnityEngine;
 
 namespace Assets.Scripts.EnemyFolder
 {
     public class EnemyComponent : MonoBehaviour
     {
-        private Enemy _enemy;
+        public Enemy Enemy;
         public string Name;
         public float Health;
         public float Energy;
+        public float Damage;
+        public float AttackSpeed;
+        private IEnemyCombatSystem _combatSystem;
         void Start()
         {
-            _enemy = new Enemy(Name,Health,Energy);
+            Enemy = new Enemy(Name, Health, Energy,Damage,AttackSpeed) {Position = transform.position};
+            _combatSystem = new CombatSystem(Enemy);
         }
 
         void Update()
         {
-            _enemy.Run();
+            Enemy.Run();
+            if(Enemy.Angry)
+            _combatSystem.EnemyAttack();
         }
 
         void FixedUpdate()
         {
-            _enemy.EnergyRegeneration();
-            
+            Enemy.EnergyRegeneration();
         }
 
         void LateUpdate()
         {
-            if (Messenger.IsListenerReady("EnemyHealth","EnemyMaxHealth","EnemyEnergy","EnemyMaxEnergy"))
+            if (Messenger.IsListenerReady(name+"Health",name+"MaxHealth",name+"Energy",name+"MaxEnergy"))
             {
-                _enemy.AddBroadcasts(Name);
+                Enemy.AddBroadcasts(Name);
             }
         }
     }

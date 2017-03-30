@@ -27,6 +27,8 @@ namespace Assets.Scripts.PlayerFolder
 
         public Player(string name, float health, float energy) : base(name, health, energy)
         {
+            Damage = 35;
+            AttackSpeed = 2;
             AddMaxHealthEvent += AddMaxHealth;
             AddCurrentHealthEvent += AddCurrentHealth;
         }
@@ -110,6 +112,5 @@ namespace Assets.Scripts.PlayerFolder
             if(AddCurrentHealthEvent != null)
                 AddCurrentHealthEvent.Invoke(health);
         }
-
     }
 }

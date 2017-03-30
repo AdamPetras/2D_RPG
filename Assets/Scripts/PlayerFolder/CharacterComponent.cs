@@ -1,25 +1,32 @@
-﻿using UnityEngine;
+﻿using Assets.Scripts.CombatSystemFolder;
+using Assets.Scripts.EnemyFolder;
+using UnityEngine;
 
 namespace Assets.Scripts.PlayerFolder
 {
     public class CharacterComponent:MonoBehaviour
     {
-        private Player _player;
+        public Player Player;
+        private IPlayerCombatSystem _combatSystem;
         void Start()
         {
-            _player = new Player(name,100,100);
+            Player = new Player(name,100,100);
+            _combatSystem = new CombatSystem(null);
         }
 
         void Update()
         {
-            _player.Moving(transform);
-            _player.Run();
+            Player.Moving(transform);
+            Player.Run();
+            _combatSystem.PlayerAttack();
         }
 
         void FixedUpdate()
         {
-            _player.EnergyRegeneration();
-            _player.AddBroadcasts(name);
+            Player.EnergyRegeneration();
+            if(Messenger.IsListenerReady(name + "Health", name + "MaxHealth", name + "Energy", name + "MaxEnergy"))
+                Player.AddBroadcasts(name);
         }
+        
     }
 }

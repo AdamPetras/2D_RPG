@@ -9,31 +9,30 @@ namespace Assets.Scripts.HUD
 {
     public class ComponentStatusBars : MonoBehaviour
     {
-        private TargetStatusBars _statusBars;
-        private PlayerStatusBars _playerStatusBars;
-        private Canvas _canvas;
+        private IPlayerStatusBar _playerStatusBar;
+        private ITargetStatusBar _targetStatusBar;
         public bool IsPlayer;
         void Start()
         {
-            _canvas = GetComponent<Canvas>();
             if(!IsPlayer)
-                _statusBars = new TargetStatusBars(_canvas);
+                _targetStatusBar = new StatusBars(GetComponent<Canvas>());
             else
-                _playerStatusBars = new PlayerStatusBars(_canvas);
+                _playerStatusBar = new StatusBars(GetComponent<Canvas>());
         }
 
         void Update()
         {
             if(!IsPlayer)
             {
-                _statusBars.Init(TargetCharacter.TargetName);
-                _statusBars.SettingSizes();
-                _statusBars.SettingText();
+                _targetStatusBar.Init(TargetCharacter.TargetName);
+                _targetStatusBar.SettingSizes();
+                _targetStatusBar.SettingText();
             }
             else if(IsPlayer)
             {
-                _playerStatusBars.SettingSizes();
-                _playerStatusBars.SettingText();
+                _playerStatusBar.Init("Player");
+                _playerStatusBar.SettingSizes();
+                _playerStatusBar.SettingText();
             }
         }
     }

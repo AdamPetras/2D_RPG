@@ -15,19 +15,21 @@ namespace Assets.Scripts.CombatSystemFolder
 
     public class TargetCharacter
     {
+        public static Transform Target;
         public static string TargetName;
         private float _treshHoldTimer;
         private const float _treshHold = 0.2f;
 
         public TargetCharacter()
         {
+            Target = null;
+            TargetName = null;
             _treshHoldTimer = 0;
         }
 
 
         public void Hit()
         {
-
             if (Input.GetMouseButton(0))
             {
                 _treshHoldTimer += Time.deltaTime;
@@ -36,22 +38,27 @@ namespace Assets.Scripts.CombatSystemFolder
             {
                 if (_treshHoldTimer < _treshHold)
                 {
-                    if (GetRay().collider != null &&
-                        Enum.GetNames(typeof (ETarget)).Any(s => s == GetRay().transform.tag))
-                    {
-                        TargetName = GetRay().transform.name;
-                        _treshHoldTimer = 0;
-                    }
-                    else
-                    {
-                        TargetName = null;
-                        _treshHoldTimer = 0;
-                    }
+                    SetTarget();
                 }
                 else _treshHoldTimer = 0;
             }
-            
+        }
 
+        private void SetTarget()
+        {
+            if(GetRay().collider != null &&
+                           Enum.GetNames(typeof(ETarget)).Any(s => s == GetRay().transform.tag))
+            {
+                Target = GetRay().transform;
+                TargetName = Target.name;
+                _treshHoldTimer = 0;
+            }
+            else
+            {
+                Target = null;
+                TargetName = null;
+                _treshHoldTimer = 0;
+            }
         }
 
         private RaycastHit2D GetRay()
