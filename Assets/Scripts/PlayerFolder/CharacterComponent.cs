@@ -18,7 +18,7 @@ namespace Assets.Scripts.PlayerFolder
         {
             Player.Moving(transform);
             Player.Run();
-            _combatSystem.PlayerAttack();
+            _combatSystem.Attack();
         }
 
         void FixedUpdate()

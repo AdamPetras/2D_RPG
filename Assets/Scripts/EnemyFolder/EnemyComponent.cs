@@ -27,7 +27,7 @@ namespace Assets.Scripts.EnemyFolder
         {
             Enemy.Run();
             if(Enemy.Angry)
-            _combatSystem.EnemyAttack();
+            _combatSystem.Attack();
         }
 
         void FixedUpdate()
